@@ -59,12 +59,12 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 
- <!-- git remote add origin https://github.com/akashsinghdhakad/goexpresso.git -->
+ <!-- ng build --prod --base-href "https://akashsinghdhakad.github.io/goexpresso/" -->
+ ng build --configuration=production --base-href "https://akashsinghdhakad.github.io/goexpresso/"
+ npx angular-cli-ghpages --dir=dist/goexpresso
 
-ng build --configuration production --base-href "https://github.com/akashsinghdhakad/goexpresso/"
- 
-ng build --configuration production --base-href "https://akashsinghdhakad.github.io/goexpresso/"
+ URI: https://akashsinghdhakad.github.io/goexpresso/
 
 
-ngh --dir=dist/goexpresso
+
 

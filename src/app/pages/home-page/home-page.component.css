@@ -25,3 +25,11 @@
     background-repeat: no-repeat;
     background-color: antiquewhite;
 }
+
+.icon-2x {
+    transform: scale(2);
+}
+
+.icon-3x {
+    transform: scale(3);
+}
