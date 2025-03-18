@@ -1,0 +1,14 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+
+.navbar__loginBtn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar__signUpBtn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
