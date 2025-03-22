@@ -5,11 +5,11 @@
     </div>
     <span class="example-spacer"></span>
     <div class="max-sm:hidden mx-2">
+        <a routerLink="/"> <span class="text-xl mx-2">Home</span></a>
         <span class="text-xl mx-2">Service</span>
         <span class="text-xl mx-2">Earnings</span>
-        <span class="text-xl mx-2">About us</span>
-        <a routerLink="address-page" class="text-xl mx-2">Other</a>
+        <a routerLink="address-page"> <span class="text-xl mx-2">Other </span></a>
     </div>
-    <button mat-stroked-button class="navbar__loginBtn">Log In</button>
-    <a lass="navbar__signUpBtn" mat-flat-button href="https://www.google.com/" target="_blank">Sign Up</a>
+    <button (click)="navigateToLoginPage()" mat-stroked-button class="navbar__loginBtn">Log In</button>
+    <a lass="navbar__signUpBtn" mat-flat-button routerLink="signup">Sign Up</a>
 </mat-toolbar>

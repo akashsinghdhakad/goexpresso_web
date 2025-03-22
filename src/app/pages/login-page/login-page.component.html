@@ -1,1 +1,37 @@
-<p>login-page works!</p>
+<div class="container m-auto bg-[#C12935] h-full p-4">
+    <div class="py-4">
+        <img class="m-auto" src="/assets/logo.svg" alt="">
+    </div>
+
+    <div class="block mx-auto bg-white rounded-xl w-full max-w-md p-5">
+        <div class="my-2">
+            <h6 class="font-semibold">Enter your Mobile Number</h6>
+            <span class="text-xs">We’ll send you an OTP via SMS to confirm your mobile number</span>
+        </div>
+        <div class="block my-2">
+            <!-- <input class="border p-2 w-full bg-gray-50" type="text" placeholder="Enter your  number"> -->
+            <form class="w-full">
+                <mat-form-field class="w-full">
+                    <mat-label>Mobile Number</mat-label>
+                    <span matTextPrefix>+91 &nbsp;</span>
+                    <input type="tel" matInput placeholder="Enter your number">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">I have read and I accept the Privacy Policy & Conditions of
+                        Use</mat-radio-button>
+                </mat-radio-group>
+            </form>
+            <div class="block my-2">
+                <p class="text-xs">I have read and I accept the Privacy Policy & Conditions of UseI have read and I
+                    accept the Privacy
+                    Policy & Conditions of UseI have read and I accept the Privacy Policy & Conditions of UseI have read
+                    and I accept the Privacy Policy & Conditions of Use</p>
+            </div>
+           
+            <div class="flex justify-center items-center my-2">
+                <button  mat-flat-button>Log In</button>
+            </div>
+        </div>
+    </div>
+</div>
