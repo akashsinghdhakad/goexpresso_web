@@ -1,0 +1,17 @@
+<div class="container mx-auto shadow-md p-4 w-full max-w-screen-sm rounded-lg bg-gray-50 my-2">
+    <div class="">
+        <h2 class="font-bold text-5xl">Package Details</h2>
+    </div>
+    <hr class="my-1 bg-white">
+    <h2 class="text-3xl">Choose Package Content</h2>
+    <div class="block my-4">
+        <mat-chip-listbox class="" aria-label="Cutest dog breeds">
+            @for (packageType of packageTypeList; track packageType) {
+                <mat-chip-option>{{packageType}}</mat-chip-option>
+            }
+        </mat-chip-listbox>
+       
+    </div>
+    <div class="flex justify-end"><a routerLink="/package-value" class="bg-red-700 px-5 py-1 text-white rounded-md">Next</a></div>
+
+</div>

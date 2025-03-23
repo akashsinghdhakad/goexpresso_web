@@ -1,0 +1,8 @@
+<button mat-button [matMenuTriggerFor]="menu"> <span class="text-xl font-normal">All pages</span></button>
+<mat-menu #menu="matMenu">
+  <!-- <button mat-menu-item>Item 1</button> -->
+  <!-- <button mat-menu-item>Summary</button> -->
+  <a mat-menu-item routerLink="add-pickup-address">Add Pickup Address</a>
+  <a mat-menu-item routerLink="add-drop-address">Add Drop Address</a>
+  <a mat-menu-item routerLink="select-packaging">Parcel Page Comp</a>
+</mat-menu>

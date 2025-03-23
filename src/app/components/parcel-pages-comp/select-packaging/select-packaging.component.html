@@ -1,0 +1,22 @@
+<div class="container mx-auto shadow-md p-4 w-full max-w-screen-sm rounded-lg bg-gray-50 my-2">
+    <div class="">
+        <h2 class="font-bold text-5xl">Package Details</h2>
+    </div>
+    <hr class="my-1 bg-white">
+    <h2 class="text-3xl">Select Packaging</h2>
+    <div class="grid grid-cols-4 gap-3 my-4">
+        <!-- <mat-chip-listbox class="" aria-label="Cutest dog breeds">
+            @for (packageType of packageTypeList; track packageType) {
+                <mat-chip-option>{{packageType}}</mat-chip-option>
+            }
+        </mat-chip-listbox> -->
+        @for (packageType of packageTypeList; track packageType) {
+        <div class="flex flex-col justify-between items-center  bg-gray-50 p-4 shadow-md rounded-md border border-red-700">
+            <mat-icon class="icon-2x text-red-700" aria-hidden="false" aria-label="Example home icon"
+                fontIcon="view_in_ar"></mat-icon>
+            <span class="text-xs text-center mt-4">{{packageType}}</span>
+        </div>
+        }
+    </div>
+    <div class="flex justify-end"><a routerLink="/choose-parcel-weight" class="bg-red-700 px-5 py-1 text-white rounded-md">Next</a></div>
+</div>

@@ -1,0 +1,65 @@
+<div class="container mx-auto shadow-md p-4 w-full max-w-screen-sm">
+    <div class="my-2">
+        <h2 class="text-5xl font-semibold">Add Drop Address</h2>
+    </div>
+    <form action="">
+        <div class="block mx-auto my-4">
+            <div class="my-2">
+                <h6 class="font-bold">DROP CONTACT DETAILS</h6>
+            </div>
+            <div class="grid grid-cols-2 gap-5">
+                <div class="block">
+                    <label class="" for="">Contact Name</label>
+                    <input class="border-2 border-red-700 px-2 py-1 w-full my-2" type="text" placeholder="Contact Name">
+                </div>
+                <div class="block">
+                    <label class="" for="">Mobile Number</label>
+                    <input class="border-2 border-red-700 px-2 py-1 w-full my-2" type="text"
+                        placeholder="Mobile Number">
+                    <span class="text-xs">We’ll call this number to coordinate pickup</span>
+                </div>
+            </div>
+            <div class="block">
+                <label class="" for="">Email Address</label>
+                <input class="border-2 border-red-700 px-2 py-1 w-full my-2" type="text" placeholder="Email Address">
+            </div>
+        </div>
+        <div class="block mx-auto my-4">
+            <div class="my-2">
+                <h6 class="font-bold">ADDRESS DETAILS</h6>
+            </div>
+            <div class="block">
+                <label class="" for="">Flat, Housing no., Building, Apartment</label>
+                <input class="border-2 border-red-700 px-2 py-1 w-full my-2" type="text"
+                    placeholder="Flat, Housing no., Building, Apartment">
+            </div>
+            <div class="block">
+                <label class="" for="">Area, street, sector</label>
+                <input class="border-2 border-red-700 px-2 py-1 w-full my-2" type="text"
+                    placeholder="Area, street, sector">
+            </div>
+            <div class="block">
+                <label class="" for="">Pincode</label>
+                <input class="border-2 border-red-700 px-2 py-1 w-full my-2" type="text" placeholder="Pincode">
+            </div>
+            <div class="grid grid-cols-2 gap-5">
+                <div class="block">
+                    <label class="" for="">City</label>
+                    <input class="border-2 border-red-700 px-2 py-1 w-full my-2" type="text" placeholder="City">
+                </div>
+                <div class="block">
+                    <label class="" for="">State</label>
+                    <input class="border-2 border-red-700 px-2 py-1 w-full my-2" type="text" placeholder="State">
+                </div>
+            </div>
+        </div>
+        <div class="block mx-auto my-4">
+            <mat-chip-listbox class="" aria-label="Cutest dog breeds">
+                @for (addressType of addressTypeList; track addressType) {
+                  <mat-chip-option >{{addressType}}</mat-chip-option>
+                }
+              </mat-chip-listbox>
+              <button class="bg-red-700 w-full max-w-md text-white py-2 block mx-auto mb-2 mt-5" >Add Drop Address</button>
+        </div>
+    </form>
+</div>
