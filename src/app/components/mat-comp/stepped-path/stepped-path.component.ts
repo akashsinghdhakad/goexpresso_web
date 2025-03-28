@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, viewChild, ViewChild } from '@angular/core';
 import { FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { StepperOrientation, MatStepperModule } from '@angular/material/stepper';
+import { StepperOrientation, MatStepperModule, MatStepper } from '@angular/material/stepper';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,11 +25,12 @@ import { SchedulePageComponent } from "../../../pages/parcel-pages/schedule-page
     AddressPageComponent,
     PackageDetailsPageComponent,
     SchedulePageComponent
-],
+  ],
   templateUrl: './stepped-path.component.html',
   styleUrl: './stepped-path.component.css'
 })
 export class SteppedPathComponent {
+
   private _formBuilder = inject(FormBuilder);
 
   firstFormGroup = this._formBuilder.group({
@@ -49,5 +50,15 @@ export class SteppedPathComponent {
     this.stepperOrientation = breakpointObserver
       .observe('(min-width: 800px)')
       .pipe(map(({ matches }) => (matches ? 'horizontal' : 'vertical')));
+  }
+
+  @ViewChild('stepper') stepper!: MatStepper;
+  @ViewChild(AddressPageComponent) addressPage!: AddressPageComponent;
+  onNextStep(): void {
+    this.stepper.next(); 
+  }
+  onChildFunctionCalled() {
+    this.onNextStep();
+    console.log('Function in SteppedPathComponent called by child!');
   }
 }

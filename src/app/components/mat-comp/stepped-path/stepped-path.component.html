@@ -7,18 +7,18 @@
     }
   }
   
-  <mat-stepper
+  <mat-stepper #stepper
     class="example-stepper"
     [orientation]="(stepperOrientation | async)!">
-    <mat-step [stepControl]="firstFormGroup" label="Fill out your name">
+    <mat-step  [stepControl]="firstFormGroup" label="Address">
       <form [formGroup]="firstFormGroup">
-      <app-address-page></app-address-page>
+      <app-address-page (notifyParent)="onChildFunctionCalled()" ></app-address-page>
         <div>
-          <button mat-button matStepperNext>Next</button>
+          <button (click)="onNextStep()" mat-button >Next</button>
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+    <mat-step [stepControl]="secondFormGroup" label="Package">
       <form [formGroup]="secondFormGroup">
       <app-package-details-page></app-package-details-page>
         <div>
@@ -27,7 +27,7 @@
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup" label="Fill out your phone number">
+    <mat-step [stepControl]="thirdFormGroup" label="Schedule">
       <form [formGroup]="thirdFormGroup">
        <app-schedule-page></app-schedule-page>
         <div>
@@ -37,7 +37,7 @@
       </form>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
+      <ng-template matStepLabel>Summary</ng-template>
       <p>You are now done.</p>
       <div>
         <button mat-button matStepperPrevious>Back</button>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+
 
 
 @Component({
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './address-page.component.css'
 })
 export class AddressPageComponent {
+  someFunction() {
+    console.log('Function in AddressPageComponent called!');
+  }
+  @Output() notifyParent = new EventEmitter<void>();
 
+  triggerParentFunction() {
+    this.notifyParent.emit(); // Notify the parent component
+  }
 }
