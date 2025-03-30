@@ -23,43 +23,17 @@
     <h4 class="text-5xl font-semibold py-2">Package Details</h4>
     <hr class="py-1 bg-white">
     <div class="p-2">
-      <div class="flex bg-white rounded-md justify-between p-2 items-center my-2">
-        <div class="block ">
-          <h6>Select Packaging</h6>
-        </div>
-        <div class="flex max-sm:flex-col justify-end items-center">
-          <mat-icon class="icon-2x text-red-700 mx-2" aria-hidden="false" aria-label="Example home icon"
-            fontIcon="view_in_ar"></mat-icon>
-          <span class="text-xs my-2">Box / Carton</span>
-          <button class="bg-red-700 px-5 py-2 text-white rounded-md mx-2 my-2">Edit</button>
-        </div>
-      </div>
-      <div class="flex bg-white rounded-md justify-between p-2 items-center my-2">
-        <div class="block ">
-          <h6>Choose Parcel Weight</h6>
-        </div>
-        <div class="flex  max-sm:flex-col justify-end items-center">
-          <mat-icon class="icon-2x text-red-700 mx-2" aria-hidden="false" aria-label="Example home icon"
-            fontIcon="attach_money"></mat-icon>
-          <span class="text-xs my-2">0.5 Kg - 2 Kg E</span>
-          <button class="bg-red-700 px-5 py-2 text-white rounded-md mx-2">Edit</button>
-        </div>
-      </div>
-      <div class="flex bg-white rounded-md justify-between p-2 items-center my-2">
-        <div class="block ">
-          <h6>Choose Package Content</h6>
-        </div>
-        <div class="flex justify-end items-center max-sm:flex-col  max-sm:items-end">
-          <span class="text-xs">Clothes & Personal Items</span>
-          <button class="bg-red-700 px-5 py-2 text-white rounded-md mx-2 mt-2">Edit</button>
-        </div>
-      </div>
-      <div class="flex bg-white rounded-md justify-between p-2 items-center my-2">
-        <div class="block ">
-          <h6>Delhivery Protect</h6>
+      <div *ngFor="let packageDetail of parcelPackageDetailsOptionList" class="flex bg-white rounded-md justify-between p-2 items-center my-2 gap-2">
+        <div class="max-sm:block flex justify-between w-full">
+          <h6>{{packageDetail.title}}</h6>
+          <div class="flex justify-between items-center mt-2">
+            <mat-icon *ngIf="packageDetail.icon" class="max-sm:scale-100 scale-200 icon-2x text-red-700 mx-2" aria-hidden="false"
+              aria-label="Example home icon" fontIcon="{{packageDetail.icon}}"></mat-icon>
+            <span *ngIf="packageDetail.subtitle" class="text-xs max-sm:mx-0 mx-2">{{packageDetail.subtitle}}</span>
+          </div>
         </div>
         <div class="flex justify-end items-center">
-          <button class="bg-red-700 px-5 py-2 text-white rounded-md mx-2">Edit</button>
+          <button class="bg-red-700 px-5 py-2 text-white rounded-md mx-2 my-2">Edit</button>
         </div>
       </div>
     </div>

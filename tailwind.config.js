@@ -86,6 +86,10 @@ module.exports = {
         "206xl": "225px",
         "3xs": "10px",
       },
+      scale: {
+        '100': '1', // Add scale-200 for 200% scaling
+        '200': '2', // Add scale-200 for 200% scaling
+      },
     },
     fontSize: {
       xl: "20px",
