@@ -4,13 +4,13 @@
         <img class="w-full" src="/assets/logo.png" routerLink="" alt="">
     </div>
     <span class="example-spacer"></span>
-    <div class="max-sm:hidden mx-2 w-full text-center">
+    <div class="max-sm:hidden mx-2 w-full text-end">
         <a routerLink="/"> <span class="text-xl mx-2">Home</span></a>
         <span class="text-xl mx-2">Service</span>
         <span class="text-xl mx-2">Earnings</span>
-        <!-- <a routerLink="parcel-page"> <span class="text-xl mx-2">Other </span></a>
-        <app-menu-main></app-menu-main> -->
+        <a routerLink="parcel-page"> <span class="text-xl mx-2">Other </span></a>
+        <app-menu-main></app-menu-main>
     </div>
-    <a  href="#explore" mat-stroked-button class="navbar__loginBtn">Log In</a>
-    <!-- <a lass="navbar__signUpBtn" mat-flat-button routerLink="signup">Sign Up</a> -->
+    <a  (click)="navigateToLoginPage()" mat-flat-button class="navbar__loginBtn">Log In</a>
+    <!-- <a lass="navbar__signUpBtn"  mat-stroked-button routerLink="signup">Sign Up</a> -->
 </mat-toolbar>

@@ -10,10 +10,12 @@ import { AddDropAddressPageComponent } from './pages/add-drop-address-page/add-d
 import { ChooseParcelWeightComponent } from './components/parcel-pages-comp/choose-parcel-weight/choose-parcel-weight.component';
 import { ChoosePackageContentComponent } from './components/parcel-pages-comp/choose-package-content/choose-package-content.component';
 import { PackageValueComponent } from './components/parcel-pages-comp/package-value/package-value.component';
+import { OtpPageComponent } from './pages/otp-page/otp-page.component';
   
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
     { path: 'login', component: LoginPageComponent },
+    { path: 'verify-otp', component: OtpPageComponent },
     { path: 'signup', component: SignupPageComponent },
     { path: 'address-page', component: AddressPageComponent },
     { path: 'parcel-page', component: ParcelPageComponent },

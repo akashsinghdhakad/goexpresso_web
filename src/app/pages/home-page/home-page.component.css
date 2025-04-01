@@ -3,5 +3,6 @@
     background-image: url("/assets/hero_bg.png");
     background-repeat: no-repeat;
     background-color: antiquewhite;
+    background-size: cover;
 }
 
