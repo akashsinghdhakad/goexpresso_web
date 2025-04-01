@@ -11,6 +11,7 @@ import { ChooseParcelWeightComponent } from './components/parcel-pages-comp/choo
 import { ChoosePackageContentComponent } from './components/parcel-pages-comp/choose-package-content/choose-package-content.component';
 import { PackageValueComponent } from './components/parcel-pages-comp/package-value/package-value.component';
 import { OtpPageComponent } from './pages/otp-page/otp-page.component';
+import { NotificationPageComponent } from './pages/traveller/notification-page/notification-page.component';
   
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
@@ -25,6 +26,7 @@ export const routes: Routes = [
     { path: 'choose-parcel-weight', component: ChooseParcelWeightComponent },
     { path: 'choose-package-content', component: ChoosePackageContentComponent },
     { path: 'package-value', component: PackageValueComponent },
+    { path: 'notification', component: NotificationPageComponent },
  ];
 
 
