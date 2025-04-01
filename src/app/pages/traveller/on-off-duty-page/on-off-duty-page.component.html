@@ -1,0 +1,14 @@
+<div class="container mx-auto max-w-sm bg-gray-50 min-h-full">
+    <div class="flex justify-center my-4 items-center gap-4 border-2 w-fit mx-auto rounded-xl p-2">
+        <span>{{isChecked ? "ON DUTY" : "OFF DUTY"}}</span>
+        <mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle>
+    </div>
+    <div class="flex justify-between items-center bg-blue-200 p-2">
+        <h2>Today's Earnings</h2>
+        <span>&#8377; 0</span>
+    </div>
+    <div class="flex flex-col justify-center items-center mt-4 text-center min-h-56">
+        <h3>Good Afternoon, Captain</h3>
+        <h3 class="font-bold">Go ON DUTY t start earning </h3>
+    </div>
+</div>
