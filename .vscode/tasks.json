@@ -37,6 +37,51 @@
           }
         }
       }
+    },
+    {
+      "label": "Git Push to origin main",
+      "type": "shell",
+      "command": "git",
+      "args": [
+        "push",
+        "origin",
+        "main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Git Push to origin_public main",
+      "type": "shell",
+      "command": "git",
+      "args": [
+        "push",
+        "origin_public",
+        "main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Git Pull to origin_public main",
+      "type": "shell",
+      "command": "git",
+      "args": [
+        "pull",
+        "origin_public",
+        "main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
     }
   ]
 }
