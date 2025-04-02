@@ -7,11 +7,15 @@
         <h2>Today's Earnings</h2>
         <span>&#8377; 0</span>
     </div>
-    <div class="grid grid-cols-2">
-        <div *ngFor="let packageDetail of parcelPackageDetailsOptionList" class="">
-            <mat-icon *ngIf="packageDetail.icon" class="max-sm:scale-100 scale-200 icon-2x text-red-700 mx-2"
-                aria-hidden="false"></mat-icon>
+    <div *ngFor="let packageDetail of parcelPackageDetailsOptionList" class="grid grid-cols-2 mt-4 gap-2">
+        <div class="bg-gray-50 py-2 text-center">
+            <mat-icon *ngIf="packageDetail.icon" class="max-sm:scale-100 scale-200 text-red-700 mx-2"
+                aria-hidden="false" aria-label="Example home icon" fontIcon="{{packageDetail.icon}}"></mat-icon>
         </div>
-
+        <div lass="bg-gray-50 py-2 text-center">
+            <div class="block bg-white rounded-lg">
+                <button class="bg-yellow-300 py-1 px-2 rounded-lg">Accept</button>
+            </div>
+        </div>
     </div>
 </div>
