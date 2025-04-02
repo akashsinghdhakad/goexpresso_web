@@ -12,6 +12,8 @@ import { ChoosePackageContentComponent } from './components/parcel-pages-comp/ch
 import { PackageValueComponent } from './components/parcel-pages-comp/package-value/package-value.component';
 import { OtpPageComponent } from './pages/otp-page/otp-page.component';
 import { NotificationPageComponent } from './pages/traveller/notification-page/notification-page.component';
+import { OnOffDutyPageComponent } from './pages/traveller/on-off-duty-page/on-off-duty-page.component';
+import { PickupParcelPageComponent } from './pages/traveller/pickup-parcel-page/pickup-parcel-page.component';
   
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
@@ -27,6 +29,8 @@ export const routes: Routes = [
     { path: 'choose-package-content', component: ChoosePackageContentComponent },
     { path: 'package-value', component: PackageValueComponent },
     { path: 'notification', component: NotificationPageComponent },
+    { path: 'on-off-duty', component: OnOffDutyPageComponent },
+    { path: 'pickup-parcel', component: PickupParcelPageComponent },
  ];
 
 
