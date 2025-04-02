@@ -14,6 +14,7 @@ import { OtpPageComponent } from './pages/otp-page/otp-page.component';
 import { NotificationPageComponent } from './pages/traveller/notification-page/notification-page.component';
 import { OnOffDutyPageComponent } from './pages/traveller/on-off-duty-page/on-off-duty-page.component';
 import { PickupParcelPageComponent } from './pages/traveller/pickup-parcel-page/pickup-parcel-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
   
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
@@ -33,6 +34,7 @@ export const routes: Routes = [
     { path: 'notification', component: NotificationPageComponent },
     { path: 'on-off-duty', component: OnOffDutyPageComponent },
     { path: 'pickup-parcel', component: PickupParcelPageComponent },
+    { path: 'profile-page', component: ProfilePageComponent },
  ];
 
 
