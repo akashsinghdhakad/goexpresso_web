@@ -5,13 +5,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { RouterServiceService } from '../../services/router-service.service';
 
 @Component({
   selector: 'app-login-page',
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule,MatRadioModule,MatButtonModule],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatRadioModule, MatButtonModule],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css'
 })
 export class LoginPageComponent {
 
+  constructor(private routerService: RouterServiceService) { }
+
+  onClickLogin() {
+    this.routerService.navigateTo('/verify-otp');
+  }
 }
