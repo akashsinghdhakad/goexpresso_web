@@ -6,7 +6,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { ParcelPageComponent } from './pages/parcel-pages/parcel-page/parcel-page.component';
 import { AddPickupAddressPageComponent } from './pages/add-pickup-address-page/add-pickup-address-page.component';
 import { AddDropAddressPageComponent } from './pages/add-drop-address-page/add-drop-address-page.component';
- import { SelectPackagingComponent } from './components/parcel-pages-comp/select-packaging/select-packaging.component';
+import { SelectPackagingComponent } from './components/parcel-pages-comp/select-packaging/select-packaging.component';
 import { ChooseParcelWeightComponent } from './components/parcel-pages-comp/choose-parcel-weight/choose-parcel-weight.component';
 import { ChoosePackageContentComponent } from './components/parcel-pages-comp/choose-package-content/choose-package-content.component';
 import { PackageValueComponent } from './components/parcel-pages-comp/package-value/package-value.component';
@@ -14,7 +14,9 @@ import { OtpPageComponent } from './pages/otp-page/otp-page.component';
 import { NotificationPageComponent } from './pages/traveller/notification-page/notification-page.component';
 import { OnOffDutyPageComponent } from './pages/traveller/on-off-duty-page/on-off-duty-page.component';
 import { PickupParcelPageComponent } from './pages/traveller/pickup-parcel-page/pickup-parcel-page.component';
-  
+import { SelectProfileTypePageComponent } from './pages/select-profile-type-page/select-profile-type-page.component';
+import { authGuard } from './guards/auth.guard';
+
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
     { path: 'login', component: LoginPageComponent },
@@ -33,6 +35,7 @@ export const routes: Routes = [
     { path: 'notification', component: NotificationPageComponent },
     { path: 'on-off-duty', component: OnOffDutyPageComponent },
     { path: 'pickup-parcel', component: PickupParcelPageComponent },
- ];
+    { path: 'user/select-profile-type', component: SelectProfileTypePageComponent, canActivate: [authGuard] },
+];
 
 

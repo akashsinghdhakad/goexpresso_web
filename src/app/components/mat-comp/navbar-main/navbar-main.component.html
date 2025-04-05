@@ -1,4 +1,4 @@
-<mat-toolbar class="navbar">
+<mat-toolbar *ngIf="!isLoggedIn" class="navbar">
     <!-- <span class="text-7xl font-bold text-red-700 tracking-wide">Goexpresso</span>  -->
     <div class="w-full max-w-52">
         <img class="w-full" src="/assets/logo.png" routerLink="" alt="">
@@ -11,6 +11,6 @@
         <a routerLink="parcel-page"> <span class="text-xl mx-2">Other </span></a>
         <app-menu-main></app-menu-main>
     </div>
-    <a  (click)="navigateToLoginPage()" mat-flat-button class="navbar__loginBtn">Log In</a>
+    <a (click)="navigateToLoginPage()" mat-flat-button class="navbar__loginBtn">Log In</a>
     <!-- <a lass="navbar__signUpBtn"  mat-stroked-button routerLink="signup">Sign Up</a> -->
 </mat-toolbar>
