@@ -3,15 +3,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbar } from '@angular/material/toolbar';
 import { AuthService } from '../../services/auth.service';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterServiceService } from '../../services/router-service.service';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-select-profile-type-page',
-  imports: [MatToolbar, MatSidenavModule, MatButtonModule],
+  imports: [MatIconModule, MatSidenavModule, MatButtonModule],
   templateUrl: './select-profile-type-page.component.html',
   styleUrl: './select-profile-type-page.component.css'
 })
 export class SelectProfileTypePageComponent implements OnInit {
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private routerService: RouterServiceService) { }
 
   isLoggedIn: boolean = false;
 
@@ -20,5 +23,8 @@ export class SelectProfileTypePageComponent implements OnInit {
       this.isLoggedIn = status;
     });
   }
-  showFiller = false;
+
+  onTapSendParcel() {
+    this.routerService.navigateTo("parcel-page");
+  }
 }

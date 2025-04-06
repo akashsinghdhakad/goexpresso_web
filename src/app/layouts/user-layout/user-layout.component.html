@@ -1,0 +1,24 @@
+<mat-drawer-container class="min-h-full max-w-sm mx-auto" autosize>
+
+    <mat-toolbar class="flex justify-between items-center shadow-sm mb-4">
+        <mat-icon *ngIf="!showBackButton" (click)="drawer.toggle()" fontIcon="menu"></mat-icon>
+        <mat-icon *ngIf="showBackButton" (click)="goBack()" fontIcon="arrow_back"></mat-icon>
+        <div class="flex gap-2">
+            <mat-icon fontIcon="notifications"></mat-icon>
+            <mat-icon (click)="navigateToProfilePage()" fontIcon="account_circle"></mat-icon>
+        </div>
+    </mat-toolbar>
+
+    <mat-drawer #drawer class="mat-drawer-custom" mode="over">
+        <p>Auto-resizing sidenav</p>
+        @if (showFiller) {
+        <p>Lorem, ipsum dolor sit amet consectetur.</p>
+        }
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+            Toggle extra text
+        </button>
+    </mat-drawer>
+
+
+    <router-outlet></router-outlet>
+</mat-drawer-container>

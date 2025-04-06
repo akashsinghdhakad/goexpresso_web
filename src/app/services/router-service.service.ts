@@ -8,6 +8,9 @@ export class RouterServiceService {
 
   constructor(private router: Router) { }
 
+  routerEvent() {
+    return this.router.events;
+  }
   navigateToTarget() {
     // Navigate to '/target-route'
     this.router.navigate(['/target-route']);
@@ -49,4 +52,13 @@ export class RouterServiceService {
     };
     this.router.navigate(navigationPath, navigationExtras);
   }
+
+  navigateWithParamsWithRecord(route: string, params: string[], queryParams?: Record<string, any>) {
+    const navigationPath = [route, ...params];
+    const navigationExtras: NavigationExtras = {
+      queryParams: queryParams,
+    };
+    this.router.navigate(navigationPath, navigationExtras);
+  }
+
 }

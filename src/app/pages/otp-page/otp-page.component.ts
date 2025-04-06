@@ -19,6 +19,6 @@ export class OtpPageComponent {
 
   login() {
     this.authService.login();
-    this.routerService.navigateTo('user/select-profile-type');
+    this.routerService.navigateTo('/user');
   }
 }
