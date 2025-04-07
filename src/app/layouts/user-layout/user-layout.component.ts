@@ -48,6 +48,6 @@ export class UserLayoutComponent {
   }
 
   navigateToProfilePage() {
-    this.routerService.navigateTo('/user/profile');
+    this.routerService.navigateRelative(["user",'profile']);
   }
 }

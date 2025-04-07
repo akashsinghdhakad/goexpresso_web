@@ -13,18 +13,13 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './select-profile-type-page.component.html',
   styleUrl: './select-profile-type-page.component.css'
 })
-export class SelectProfileTypePageComponent implements OnInit {
-  constructor(private authService: AuthService, private routerService: RouterServiceService) { }
+export class SelectProfileTypePageComponent  {
+  constructor( private routerService: RouterServiceService) { }
 
-  isLoggedIn: boolean = false;
+  
 
-  ngOnInit() {
-    this.authService.isLoggedIn().subscribe(status => {
-      this.isLoggedIn = status;
-    });
-  }
 
   onTapSendParcel() {
-    this.routerService.navigateTo("parcel-page");
+    this.routerService.navigateRelative(["user", "parcel"]);
   }
 }

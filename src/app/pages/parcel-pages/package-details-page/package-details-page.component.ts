@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ParcelPackageDetailsOption } from '../../../models/parcel-package-details-option';
 import { CommonModule } from '@angular/common';
+import { RouterServiceService } from '../../../services/router-service.service';
 
 @Component({
   selector: 'app-package-details-page',
@@ -10,6 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './package-details-page.component.css'
 })
 export class PackageDetailsPageComponent {
+  constructor(private routerService: RouterServiceService) { };
+
   parcelPackageDetailsOptionList: ParcelPackageDetailsOption[] = [
     {
       id: 1,
@@ -30,9 +33,13 @@ export class PackageDetailsPageComponent {
       subtitle: 'Clothes & Personal Items',
     },
     {
-      id: 4, 
+      id: 4,
       title: 'Delhivery Protect',
     },
 
   ];
+
+  onTapNext() {
+    this.routerService.navigateRelative(["user", "parcel", "schedule"]);
+  }
 }

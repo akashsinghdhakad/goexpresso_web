@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { RouterServiceService } from '../../../services/router-service.service';
 
 
 
@@ -9,12 +10,18 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './address-page.component.css'
 })
 export class AddressPageComponent {
+constructor(private routerService: RouterServiceService){};
+
   someFunction() {
     console.log('Function in AddressPageComponent called!');
   }
   @Output() notifyParent = new EventEmitter<void>();
 
   triggerParentFunction() {
-    this.notifyParent.emit(); // Notify the parent component
+    this.notifyParent.emit();
+  }
+
+  onTapNext() {
+    this.routerService.navigateRelative(["user", "parcel","package-details"]);
   }
 }

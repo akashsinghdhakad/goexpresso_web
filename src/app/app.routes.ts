@@ -18,20 +18,18 @@ import { SelectProfileTypePageComponent } from './pages/select-profile-type-page
 import { authGuard } from './guards/auth.guard';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
+import { PackageDetailsPageComponent } from './pages/parcel-pages/package-details-page/package-details-page.component';
+import { SchedulePageComponent } from './pages/parcel-pages/schedule-page/schedule-page.component';
+import { SummaryPageComponent } from './pages/parcel-pages/summary-page/summary-page.component';
 
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
     { path: 'login', component: LoginPageComponent },
     { path: 'verify-otp', component: OtpPageComponent },
     { path: 'signup', component: SignupPageComponent },
-    { path: 'address-page', component: AddressPageComponent },
     { path: 'parcel-page', component: ParcelPageComponent },
     { path: 'add-pickup-address', component: AddPickupAddressPageComponent },
     { path: 'add-drop-address', component: AddDropAddressPageComponent },
-    { path: 'select-packaging', component: SelectPackagingComponent },
-    { path: 'choose-parcel-weight', component: ChooseParcelWeightComponent },
-    { path: 'choose-package-content', component: ChoosePackageContentComponent },
-    { path: 'package-value', component: PackageValueComponent },
     { path: 'on-off-duty', component: OnOffDutyPageComponent },
     { path: 'pickup-parcel', component: PickupParcelPageComponent },
     {
@@ -43,6 +41,21 @@ export const routes: Routes = [
             { path: 'select-profile-type', component: SelectProfileTypePageComponent, canActivate: [authGuard] },
             { path: 'profile', component: ProfilePageComponent },
             { path: 'notification', component: NotificationPageComponent },
+            {
+                path: 'parcel',
+                // component: ParcelPageComponent,
+                children: [
+                    { path: '', redirectTo: 'address', pathMatch: 'full' },
+                    { path: 'address', component: AddressPageComponent },
+                    { path: 'package-details', component: PackageDetailsPageComponent },
+                    { path: 'schedule', component: SchedulePageComponent },
+                    { path: 'summary', component: SummaryPageComponent },
+                    { path: 'select-packaging', component: SelectPackagingComponent },
+                    { path: 'choose-parcel-weight', component: ChooseParcelWeightComponent },
+                    { path: 'choose-package-content', component: ChoosePackageContentComponent },
+                    { path: 'package-value', component: PackageValueComponent },
+                ],
+            },
         ],
     },
 ];

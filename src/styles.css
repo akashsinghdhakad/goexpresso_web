@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 
-*{
+* {
     font-family: 'poppins';
 }
 
@@ -22,10 +22,20 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+    font-family: "poppins";
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+body {
+    margin: 0;
+    font-family: "poppins";
+}
 
 .icon-2x {
     transform: scale(2);

@@ -7,28 +7,29 @@
     
 </div> -->
 
-<div class="grid gap-5 md:grid-cols-2 lg:grid-cols-2 py-4">
+<div class="grid gap-5 grid-cols-1 py-4">
   <div class="block m-auto w-full max-w-sm bg-white border-2 p-2 rounded-md">
-    <h4 class="text-5xl font-semibold">Order Summary </h4>
-    <h3 class="text-5xl my-3">Address Details</h3>
+    <h4 class="text-2xl font-semibold">Order Summary </h4>
+    <h3 class="text-2xl my-3">Address Details</h3>
     <div class="text-red-700 px-4 text-3xl">
-      <h4>Pickup Address</h4>
+      <h6 class="text-xl">Pickup Address</h6>
       <div class="my-3"></div>
-      <h4>Delivery Address</h4>
+      <h6 class="text-xl">Delivery Address</h6>
     </div>
-    <h3 class="text-5xl my-3">Package details</h3>
+    <h3 class="text-2xl my-3">Package details</h3>
 
   </div>
   <div class="block bg-gray-50 p-2  border-2 rounded-md">
-    <h4 class="text-5xl font-semibold py-2">Package Details</h4>
+    <h4 class="text-2xl font-semibold py-2">Package Details</h4>
     <hr class="py-1 bg-white">
     <div class="p-2">
-      <div *ngFor="let packageDetail of parcelPackageDetailsOptionList" class="flex bg-white rounded-md justify-between p-2 items-center my-2 gap-2">
+      <div *ngFor="let packageDetail of parcelPackageDetailsOptionList"
+        class="flex bg-white rounded-md justify-between p-2 items-center my-2 gap-2">
         <div class="max-sm:block flex justify-between w-full">
           <h6>{{packageDetail.title}}</h6>
           <div class="flex justify-between items-center mt-2">
-            <mat-icon *ngIf="packageDetail.icon" class="max-sm:scale-100 scale-200 icon-2x text-red-700 mx-2" aria-hidden="false"
-              aria-label="Example home icon" fontIcon="{{packageDetail.icon}}"></mat-icon>
+            <mat-icon *ngIf="packageDetail.icon" class="max-sm:scale-100 scale-200 icon-2x text-red-700 mx-2"
+              aria-hidden="false" aria-label="Example home icon" fontIcon="{{packageDetail.icon}}"></mat-icon>
             <span *ngIf="packageDetail.subtitle" class="text-xs max-sm:mx-0 mx-2">{{packageDetail.subtitle}}</span>
           </div>
         </div>
@@ -37,5 +38,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="flex justify-end p-2">
+    <button (click)="onTapNext()" class="bg-red-700 text-white px-5 py-2 rounded-md ">NEXT</button>
   </div>
 </div>
