@@ -1,0 +1,18 @@
+<div class="block rounded-md shadow-md border bg-white">
+    <h4 class="p-4 font-bold">Select Date</h4>
+    <hr class="p-1 bg-white">
+    <div class="p-2">
+        <div class="my-4 flex flex-col">
+            <label class="font-semibold my-2" for="">Departure Date</label>
+           <app-mat-date-picker></app-mat-date-picker>
+        </div>
+        <div class="my-4 flex flex-col">
+            <label class="font-semibold my-2" for="">Arrival Date</label>
+            <app-mat-date-picker></app-mat-date-picker>
+        </div>
+    </div>
+    <hr class="bg-white p-1">
+    <div class="flex justify-end p-2">
+        <button (click)="onTapNext()" class="bg-red-700 text-white px-5 py-2 rounded-md ">NEXT</button>
+    </div>
+</div>

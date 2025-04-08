@@ -21,6 +21,9 @@ import { UserLayoutComponent } from './layouts/user-layout/user-layout.component
 import { PackageDetailsPageComponent } from './pages/parcel-pages/package-details-page/package-details-page.component';
 import { SchedulePageComponent } from './pages/parcel-pages/schedule-page/schedule-page.component';
 import { SummaryPageComponent } from './pages/parcel-pages/summary-page/summary-page.component';
+import { SelectLocationPageComponent } from './pages/traveller/select-location-page/select-location-page.component';
+import { SelectDatePageComponent } from './pages/traveller/select-date-page/select-date-page.component';
+import { DetailPageComponent } from './pages/traveller/detail-page/detail-page.component';
 
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
@@ -54,6 +57,15 @@ export const routes: Routes = [
                     { path: 'choose-parcel-weight', component: ChooseParcelWeightComponent },
                     { path: 'choose-package-content', component: ChoosePackageContentComponent },
                     { path: 'package-value', component: PackageValueComponent },
+                ],
+            },
+            {
+                path: 'traveller',
+                children: [
+                    { path: '', redirectTo: 'select-date', pathMatch: 'full' },
+                    { path: 'select-date', component: SelectDatePageComponent },
+                    { path: 'select-location', component: SelectLocationPageComponent },
+                    { path: 'detail', component: DetailPageComponent },
                 ],
             },
         ],

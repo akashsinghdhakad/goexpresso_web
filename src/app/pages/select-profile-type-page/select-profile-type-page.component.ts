@@ -22,4 +22,7 @@ export class SelectProfileTypePageComponent  {
   onTapSendParcel() {
     this.routerService.navigateRelative(["user", "parcel"]);
   }
+  onTapTraveller() {
+    this.routerService.navigateRelative(["user", "traveller"]);
+  }
 }
