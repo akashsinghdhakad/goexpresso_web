@@ -1,8 +1,9 @@
-<mat-drawer-container class="min-h-full max-w-sm mx-auto" autosize>
+<mat-drawer-container class="min-h-full max-w-md mx-auto" autosize>
 
     <mat-toolbar class="flex justify-between items-center shadow-sm mb-4">
         <mat-icon *ngIf="!showBackButton" (click)="drawer.toggle()" fontIcon="menu"></mat-icon>
         <mat-icon class="cursor-pointer" *ngIf="showBackButton" (click)="goBack()" fontIcon="arrow_back"></mat-icon>
+        <span *ngIf="pageDetail" class="text-xl text-start w-full mx-4 font-medium">{{pageDetail.pageTitle}}</span>
         <div class="flex gap-2">
             <mat-icon class="cursor-pointer" fontIcon="notifications"></mat-icon>
             <mat-icon class="cursor-pointer" (click)="navigateToProfilePage()" fontIcon="account_circle"></mat-icon>

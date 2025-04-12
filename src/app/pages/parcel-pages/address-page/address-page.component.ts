@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterServiceService } from '../../../services/router-service.service';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
 @Component({
   selector: 'app-address-page',
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './address-page.component.html',
   styleUrl: './address-page.component.css'
 })
