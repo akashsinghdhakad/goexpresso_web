@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ServiceTypeDetail } from '../../models/service-type-detail';
+import { ServiceTypeDetail } from '../../interfaces/service-type-detail';
 import { CommonModule } from '@angular/common';
 
 @Component({

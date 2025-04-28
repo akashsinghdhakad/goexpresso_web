@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { ParcelPackageDetailsOption } from '../../../models/parcel-package-details-option';
+import { ParcelPackageDetailsOption } from '../../../interfaces/parcel-package-details-option';
 import { CommonModule } from '@angular/common';
 import { RouterServiceService } from '../../../services/router-service.service';
 

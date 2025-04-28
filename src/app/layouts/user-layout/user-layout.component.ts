@@ -6,7 +6,7 @@ import { MatToolbar } from '@angular/material/toolbar';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { RouterServiceService } from '../../services/router-service.service';
 import { CommonModule, Location } from '@angular/common';
-import { PageTitle } from '../../models/page-title';
+import { PageTitle } from '../../interfaces/page-title';
 
 @Component({
   selector: 'app-user-layout',

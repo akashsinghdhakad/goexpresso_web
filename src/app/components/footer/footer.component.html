@@ -1,0 +1,67 @@
+<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <div class="md:flex justify-between">
+        <div class="mb-6">
+            <a href="/" class="flex items-center justify-center">
+                <img src="./assets/logo.png" class="h-24 me-3" alt="FlowBite Logo" />
+            </a>
+        </div>
+        <div class="grid grid-cols-4 gap-8 sm:gap-6 max-sm:grid-cols-2">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">About us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Other</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Goexpresso</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Who we are</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Blog</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Work with us</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <a href="/" class="flex items-center mb-2">
+                    <img src="./assets/google_appicon.png" class="h-10" alt="google_appicon" />
+                </a>
+                <a href="/" class="flex items-center mt-2">
+                    <img src="./assets/appstore_appicon.png" class="h-10" alt="appstore_appicon" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/"
+                class="hover:underline">GOEXPRESSO</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a *ngFor="let itemDetail of socialLinkList" href="{{itemDetail.link}}"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <img class="w-8 h-8 mx-2" src="{{itemDetail.iconSrc}}" alt="{{itemDetail.altText}}">
+            </a>
+        </div>
+    </div>
+</div>

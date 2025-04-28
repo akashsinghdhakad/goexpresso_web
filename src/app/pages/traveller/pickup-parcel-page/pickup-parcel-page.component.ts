@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { ParcelPackageDetailsOption } from '../../../models/parcel-package-details-option';
+import { ParcelPackageDetailsOption } from '../../../interfaces/parcel-package-details-option';
 import { CommonModule } from '@angular/common';
 
 @Component({
