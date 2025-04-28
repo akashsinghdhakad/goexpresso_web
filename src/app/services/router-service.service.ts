@@ -11,6 +11,12 @@ export class RouterServiceService {
   routerEvent() {
     return this.router.events;
   }
+
+  /// Get the current navigation state using history.state
+  getCurrentNavigationState() {
+    return history.state;  // Access state directly from the browser's history API
+  }
+
   navigateToTarget() {
     // Navigate to '/target-route'
     this.router.navigate(['/target-route']);
@@ -61,4 +67,12 @@ export class RouterServiceService {
     this.router.navigate(navigationPath, navigationExtras);
   }
 
+  // Navigate to a route using Router state
+  navigateToWithState(route: string, state: any, extras?: NavigationExtras) {
+    const navigationExtras: NavigationExtras = {
+      state: state,
+      ...extras
+    };
+    this.router.navigate([route], navigationExtras);
+  }
 }
